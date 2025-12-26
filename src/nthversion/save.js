@@ -16,12 +16,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({ attributes }) {
-	const { versionNumber, className } = attributes;
-	console.log(versionNumber);
-
-	return (
-		<h2 { ...useBlockProps.save({ className }) }>
-			{ 'Core Confidence v' + versionNumber }
-		</h2>
-	);
+	// Don't render anything - the title replacement filter handles display
+	// The block's purpose is to sync the title, not to render in content
+	return null;
 }

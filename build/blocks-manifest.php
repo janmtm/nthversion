@@ -4,7 +4,7 @@ return array(
 	'nthversion' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'janmckell/nthversion',
+		'name' => 'nthversion/version',
 		'version' => '0.1.0',
 		'title' => 'Nthversion',
 		'category' => 'widgets',
@@ -31,8 +31,6 @@ return array(
 			)
 		),
 		'textdomain' => 'nthversion',
-		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css'
+		'editorScript' => 'file:./index.js'
 	)
 );

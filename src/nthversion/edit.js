@@ -59,8 +59,8 @@ const nthversionPosts = useMemo(() => {
     if (!content) return false;
     
     // Parse the content to check if first block is nthversion
-    // Block format: <!-- wp:janmckell/nthversion -->
-    const nthversionBlockPattern = /<!--\s*wp:janmckell\/nthversion/;
+    // Block format: <!-- wp:nthversion/version -->
+const nthversionBlockPattern = /<!--\s*wp:nthversion\/version/;
     
     return nthversionBlockPattern.test(content);
   });
