@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "janmckell/nthversion",
+  "version": "0.1.0",
+  "title": "Nthversion",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Update Post titles using a versioning structure.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "versionType": {
+      "type": "string",
+      "default": "minor"
+    },
+    "versionNumber": {
+      "type": "number",
+      "default": 2.8
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "nthversion",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
