@@ -1,5 +1,6 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "login": "true",
   "siteOptions": {
     "blogname": "Nthversion Playground",
     "blogdescription": "A playground for the nthversion plugin"
@@ -16,7 +17,7 @@
     },
     {
       "step": "installTheme",
-      "theme": {
+      "themeData": {
         "resource": "wordpress.org/themes",
         "slug": "twentytwentythree"
       }
