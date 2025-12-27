@@ -1,21 +1,16 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "name": "nthversion-playground",
-    "title": "Nthversion Playground",
-    "description": "A playground for the nthversion plugin",
-    "version": "1.0.0",
-    "author": "janmtm",
-    "author_url": "https://janmckell.com",
-    "license": "GPL-2.0-or-later",
-    "license_url": "https://www.gnu.org/licenses/gpl-2.0.html",
-    "textdomain": "nthversion-playground",
     "siteOptions": {
         "blogname": "Nthversion Playground",
         "blogdescription": "A playground for the nthversion plugin"
     },
     "theme": {
-        "resource": "wordpress.org\/themes",
+        "resource": "https://downloads.wordpress.org/theme",
         "slug": "twentytwentythree"
+    },
+    "preferredVersions": {
+        "php": "8.3",
+        "wp": "5.9"
     },
     "steps": [
         {
