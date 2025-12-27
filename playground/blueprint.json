@@ -1,0 +1,41 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "name": "nthversion-playground",
+    "title": "Nthversion Playground",
+    "description": "A playground for the nthversion plugin",
+    "version": "1.0.0",
+    "author": "janmtm",
+    "author_url": "https://janmckell.com",
+    "license": "GPL-2.0-or-later",
+    "license_url": "https://www.gnu.org/licenses/gpl-2.0.html",
+    "textdomain": "nthversion-playground",
+    "siteOptions": {
+        "blogname": "Nthversion Playground",
+        "blogdescription": "A playground for the nthversion plugin"
+    },
+    "theme": {
+        "resource": "wordpress.org\/themes",
+        "slug": "twentytwentythree"
+    },
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "https://github.com/janmtm/nthversion/releases/download/1.0.0/nthversion.zip",
+                "slug": "nthversion"
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "https://github.com/janmtm/nthversion-format-enabler/releases/download/1.0.0/nthversion-format-enabler.zip",
+                "slug": "nthversion-format-enabler"
+            }
+        }
+    ]
+}
