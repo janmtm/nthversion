@@ -91,13 +91,19 @@ const [versionType, setVersionType] = useState('');
 const calculatedVersionNumber = (type) =>
   type === 'major' ? Math.floor(versionNumber) + 1 : +( (versionNumber + 0.1).toFixed(1) );
 
+// Get current post title to check if update is needed
+const currentTitle = useSelect( s => s('core/editor').getEditedPostAttribute('title'), [] );
+
 // Sync block output to post title whenever versionNumber changes
 useEffect(() => {
   if (versionNumber) {
     const title = 'Core Confidence v' + versionNumber;
-    editPost({ title: title });
+    // Only update if the title doesn't already match
+    if (currentTitle !== title) {
+      editPost({ title: title });
+    }
   }
-}, [versionNumber, editPost]);
+}, [versionNumber, editPost, currentTitle]);
 
 	const handleVersionTypeChange = (value) => {
 		setVersionType(value);
@@ -128,7 +134,7 @@ useEffect(() => {
 					/>
 				</PanelBody>
 			</InspectorControls>
-		  <h2 class="wp-block-post-title">{ 'Core Confidence v' + versionNumber }</h2>
+		  <h2 className="wp-block-post-title">{ 'Core Confidence v' + versionNumber }</h2>
 		  </div>
 		);
 	}
