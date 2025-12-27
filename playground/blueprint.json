@@ -11,7 +11,7 @@
     "steps": [
     {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "https://downloads.wordpress.org/theme",
                 "slug": "twentytwentythree"
             }
