@@ -9,12 +9,21 @@
         "wp": "5.9"
     },
     "steps": [
-    {
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
             "step": "installTheme",
-            "themeData": {
-                "resource": "https://downloads.wordpress.org/theme",
-                "slug": "twentytwentythree"
+            "theme": {
+              "resource": "wordpress.org/themes",
+              "slug": "twentytwentythree"
             }
+        },
+        {
+            "step": "activateTheme",
+            "themeSlug": "twentytwentythree"
         },
         {
             "step": "installPlugin",
@@ -24,11 +33,19 @@
             }
         },
         {
+            "step": "activatePlugin",
+            "pluginSlug": "nthversion"
+        },
+        {
             "step": "installPlugin",
             "pluginZipFile": {
                 "resource": "https://github.com/janmtm/nthversion-format-enabler/releases/download/1.0.0/nthversion-format-enabler.zip",
                 "slug": "nthversion-format-enabler"
             }
+        }
+        {
+            "step": "activatePlugin",
+            "pluginSlug": "nthversion-format-enabler"
         }
     ]
 }
