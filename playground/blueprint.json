@@ -1,51 +1,51 @@
 {
-	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "siteOptions": {
-        "blogname": "Nthversion Playground",
-        "blogdescription": "A playground for the nthversion plugin"
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "siteOptions": {
+    "blogname": "Nthversion Playground",
+    "blogdescription": "A playground for the nthversion plugin"
+  },
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "5.9"
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
     },
-    "preferredVersions": {
-        "php": "8.3",
-        "wp": "5.9"
+    {
+      "step": "installTheme",
+      "theme": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentythree"
+      }
     },
-    "steps": [
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        {
-            "step": "installTheme",
-            "theme": {
-              "resource": "wordpress.org/themes",
-              "slug": "twentytwentythree"
-            }
-        },
-        {
-            "step": "activateTheme",
-            "themeSlug": "twentytwentythree"
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-                "resource": "https://github.com/janmtm/nthversion/releases/download/1.0.0/nthversion.zip",
-                "slug": "nthversion"
-            }
-        },
-        {
-            "step": "activatePlugin",
-            "pluginSlug": "nthversion"
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-                "resource": "https://github.com/janmtm/nthversion-format-enabler/releases/download/1.0.0/nthversion-format-enabler.zip",
-                "slug": "nthversion-format-enabler"
-            }
-        }
-        {
-            "step": "activatePlugin",
-            "pluginSlug": "nthversion-format-enabler"
-        }
-    ]
+    {
+      "step": "activateTheme",
+      "themeSlug": "twentytwentythree"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "https://github.com/janmtm/nthversion/releases/download/1.0.0/nthversion.zip",
+        "slug": "nthversion"
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginSlug": "nthversion"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "https://github.com/janmtm/nthversion-format-enabler/releases/download/1.0.0/nthversion-format-enabler.zip",
+        "slug": "nthversion-format-enabler"
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginSlug": "nthversion-format-enabler"
+    }
+  ]
 }
